@@ -38,6 +38,14 @@ namespace Klijent.KontroleriForme
             {
                 Koordinator.Instance.OtvoriUCKreirajZapisnik();
             };
+            Forma.kreirajPrijemnicuToolStripMenuItem.Click += (s, e) =>
+            {
+                Koordinator.Instance.OtvoriUCKreirajPrijemnicu();
+            };
+            Forma.pretragaPrijemnicaToolStripMenuItem.Click += (s, e) =>
+            {
+                Koordinator.Instance.OtvoriUCPretragaPrijemnica();
+            };
             Forma.FormClosed += OdjaviSe;
             return Forma;
         }

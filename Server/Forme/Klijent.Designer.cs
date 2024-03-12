@@ -36,9 +36,12 @@
             this.kreirajDostavnicuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otpremnicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kreirajOtpremnicuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.zapisnikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kreirajZapisnikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prijemnicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kreirajPrijemnicuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pretragaPrijemnicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +52,8 @@
             this.fakturaToolStripMenuItem,
             this.dostavnicaToolStripMenuItem,
             this.otpremnicaToolStripMenuItem,
-            this.zapisnikToolStripMenuItem});
+            this.zapisnikToolStripMenuItem,
+            this.prijemnicaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -105,14 +109,6 @@
             this.kreirajOtpremnicuToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
             this.kreirajOtpremnicuToolStripMenuItem.Text = "Kreiraj otpremnicu";
             // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 422);
-            this.panel1.TabIndex = 1;
-            // 
             // zapisnikToolStripMenuItem
             // 
             this.zapisnikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -124,8 +120,37 @@
             // kreirajZapisnikToolStripMenuItem
             // 
             this.kreirajZapisnikToolStripMenuItem.Name = "kreirajZapisnikToolStripMenuItem";
-            this.kreirajZapisnikToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kreirajZapisnikToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.kreirajZapisnikToolStripMenuItem.Text = "Kreiraj zapisnik";
+            // 
+            // prijemnicaToolStripMenuItem
+            // 
+            this.prijemnicaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kreirajPrijemnicuToolStripMenuItem,
+            this.pretragaPrijemnicaToolStripMenuItem});
+            this.prijemnicaToolStripMenuItem.Name = "prijemnicaToolStripMenuItem";
+            this.prijemnicaToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
+            this.prijemnicaToolStripMenuItem.Text = "Prijemnica";
+            // 
+            // kreirajPrijemnicuToolStripMenuItem
+            // 
+            this.kreirajPrijemnicuToolStripMenuItem.Name = "kreirajPrijemnicuToolStripMenuItem";
+            this.kreirajPrijemnicuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kreirajPrijemnicuToolStripMenuItem.Text = "Kreiraj prijemnicu";
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 422);
+            this.panel1.TabIndex = 1;
+            // 
+            // pretragaPrijemnicaToolStripMenuItem
+            // 
+            this.pretragaPrijemnicaToolStripMenuItem.Name = "pretragaPrijemnicaToolStripMenuItem";
+            this.pretragaPrijemnicaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pretragaPrijemnicaToolStripMenuItem.Text = "Pretraga prijemnica";
             // 
             // Klijent
             // 
@@ -157,6 +182,9 @@
         public System.Windows.Forms.ToolStripMenuItem kreirajOtpremnicuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zapisnikToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem kreirajZapisnikToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prijemnicaToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem kreirajPrijemnicuToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem pretragaPrijemnicaToolStripMenuItem;
     }
 }
 

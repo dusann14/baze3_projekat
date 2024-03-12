@@ -37,12 +37,15 @@ namespace Klijent
             loginKontroler = new LoginKontroler();
             kontrolerForme = new KontrolerForme();
             kontrolerFakturaDetalji = new KontrolerFakturaDetalji();
+            kontrolerPrijemnicaStavke = new KontrolerPrijemnicaStavke();
 
             kontrolerUCKreirajFakturu = new KontrolerUCKreirajFakturu();
             kontrolerUCPretragaFaktura = new KontrolerUCPretragaFaktura();
             kontrolerUCKreirajDostavnicu = new KontrolerUCKreirajDostavnicu();
             kontrolerUCKreirajOtpremnicu = new KontrolerUCKreirajOtpremnicu();
             kontrolerUCKreirajZapisnik = new KontrolerUCKreirajZapisnik();
+            kontrolerUCKreirajPrijemnicu = new KontrolerUCKreirajPrijemnicu();
+            kontrolerUCPretragaPrijemnica = new KontrolerUCPretragaPrijemnica();
         }
 
         private LoginKontroler loginKontroler;
@@ -54,6 +57,9 @@ namespace Klijent
         private KontrolerUCKreirajDostavnicu kontrolerUCKreirajDostavnicu;
         private KontrolerUCKreirajOtpremnicu kontrolerUCKreirajOtpremnicu;
         private KontrolerUCKreirajZapisnik kontrolerUCKreirajZapisnik;
+        private KontrolerUCKreirajPrijemnicu kontrolerUCKreirajPrijemnicu;
+        private KontrolerUCPretragaPrijemnica kontrolerUCPretragaPrijemnica;
+        private KontrolerPrijemnicaStavke kontrolerPrijemnicaStavke;
 
         internal void OtvoriLoginFormu()
         {   
@@ -97,6 +103,22 @@ namespace Klijent
         internal void OtvoriUCKreirajZapisnik()
         {
             KlijentForma.PostaviPanel(kontrolerUCKreirajZapisnik.GenerisiUC());
+        }
+
+        internal void OtvoriUCKreirajPrijemnicu()
+        {
+            KlijentForma.PostaviPanel(kontrolerUCKreirajPrijemnicu.GenerisiUC());
+        }
+
+        internal void OtvoriUCPretragaPrijemnica()
+        {
+            KlijentForma.PostaviPanel(kontrolerUCPretragaPrijemnica.GenerisiUC());
+        }
+
+        internal void OtvoriPrijemnicaStavke(Prijemnica prijemnica)
+        {
+            PrijemnicaStavke prijemnicaStavke = kontrolerPrijemnicaStavke.GenerisiUC(prijemnica);
+            prijemnicaStavke.ShowDialog();
         }
     }
 }

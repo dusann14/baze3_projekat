@@ -52,11 +52,11 @@ namespace Server.KontroleriForme.UCKontroleri
             try
             {
                 Kontroler.Instance.KreirajOtpremnicu(otpremnica);
-                MessageBox.Show("Sistem je uspesno kreirao dostavnicu");
+                MessageBox.Show("Sistem je uspesno kreirao otpremnicu");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Sistem nije uspesno kreirao dostavnicu");
+                MessageBox.Show("Sistem nije uspesno kreirao otpremnicu");
             }
         }
 

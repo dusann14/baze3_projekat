@@ -73,5 +73,10 @@ namespace Server.Domen
 
             return entiteti;
         }
+
+        public override string ToString()
+        {
+            return $"{ImePrezime}";
+        }
     }
 }

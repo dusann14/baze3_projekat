@@ -19,15 +19,15 @@ namespace Server.Domen
         public string Jacina { get; set; }
         public Proizvod Prozivod { get; set; }
         [Browsable(false)]
-        public string ImeTabele => "OtpremnicaView";
+        public string ImeTabele => "StavkaOtpremnice";
         [Browsable(false)]
-        public string UbaciVrednosti => "";
+        public string UbaciVrednosti => $"{BrojOtpremnice}, {IdStavke}, {Kolicina}, {Jacina}, {Prozivod.ProzivodId}";
         [Browsable(false)]
         public string IdName => "BrojOtpremnice";
         [Browsable(false)]
         public string JoinUslov => "";
         [Browsable(false)]
-        public string Alias => "o";
+        public string Alias => "so";
         [Browsable(false)]
         public string Select => "*";
         [Browsable(false)]

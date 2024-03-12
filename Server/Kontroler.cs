@@ -8,9 +8,12 @@ using Server.SistemskeOperacije.MateijalSO;
 using Server.SistemskeOperacije.OrganizacionaJedinicaSO;
 using Server.SistemskeOperacije.OtpremnicaSO;
 using Server.SistemskeOperacije.PrijavaSO;
+using Server.SistemskeOperacije.PrijemnicaSO;
 using Server.SistemskeOperacije.ProzivodSO;
 using Server.SistemskeOperacije.StavkaFaktureSO;
+using Server.SistemskeOperacije.StavkaPrijemniceSO;
 using Server.SistemskeOperacije.ValutaSO;
+using Server.SistemskeOperacije.ZapisnikSO;
 using Server.SistemskeOperacije.ZaposleniSO;
 using System;
 using System.Collections.Generic;
@@ -129,6 +132,59 @@ namespace Server
         internal void KreirajOtpremnicu(Otpremnica otpremnica)
         {
             KreirajOtpremnicuSO so = new KreirajOtpremnicuSO(otpremnica);
+            so.Template();
+        }
+
+        internal List<Dostavnica> VratiDostavnice()
+        {
+            VratiDostavniceSO so = new VratiDostavniceSO();
+            so.Template();
+            return so.Rezultat;
+        }
+
+        internal List<Otpremnica> VratiOtpremnice()
+        {
+            VratiOtpremniceSO so = new VratiOtpremniceSO();
+            so.Template();
+            return so.Rezultat;
+        }
+
+        internal void KreirajZapisnik(Zapisnik zapisnik)
+        {
+            KreirajZapisnikSO so = new KreirajZapisnikSO(zapisnik);
+            so.Template();
+        }
+
+        internal void KreirajPrijemnicu(Prijemnica prijemnica)
+        {
+            KreirajPrijemnicuSO so = new KreirajPrijemnicuSO(prijemnica);
+            so.Template();
+        }
+
+        internal List<Prijemnica> VratiPrijemnice()
+        {
+            VratiPrijemniceSO so = new VratiPrijemniceSO();
+            so.Template();
+            return so.Rezultat;
+        }
+
+        internal List<Prijemnica> VratiPrijemnicePoUslovu(Prijemnica prijemnica)
+        {
+            VratiPrijemnicePoUslovuSO so = new VratiPrijemnicePoUslovuSO(prijemnica);
+            so.Template();
+            return so.Rezultat;
+        }
+
+        internal List<StavkaPrijemnice> VratiStavkePrijemnice(Prijemnica prijemnica)
+        {
+            VratiStavkePrijemniceSO so = new VratiStavkePrijemniceSO(prijemnica);
+            so.Template();
+            return so.Rezultat;
+        }
+
+        internal void IzmeniStavke(List<StavkaPrijemnice> promenjeneStavke)
+        {
+            IzmeniStavkeSO so = new IzmeniStavkeSO(promenjeneStavke);
             so.Template();
         }
     }
