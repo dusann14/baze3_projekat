@@ -46,6 +46,8 @@ namespace Klijent
             kontrolerUCKreirajZapisnik = new KontrolerUCKreirajZapisnik();
             kontrolerUCKreirajPrijemnicu = new KontrolerUCKreirajPrijemnicu();
             kontrolerUCPretragaPrijemnica = new KontrolerUCPretragaPrijemnica();
+            kontrolerUCKreirajRacun = new KontrolerUCKreirajRacun();
+            kontrolerUCPretragaRacuna = new KontrolerUCPretragaRacuna();
         }
 
         private LoginKontroler loginKontroler;
@@ -60,6 +62,8 @@ namespace Klijent
         private KontrolerUCKreirajPrijemnicu kontrolerUCKreirajPrijemnicu;
         private KontrolerUCPretragaPrijemnica kontrolerUCPretragaPrijemnica;
         private KontrolerPrijemnicaStavke kontrolerPrijemnicaStavke;
+        private KontrolerUCKreirajRacun kontrolerUCKreirajRacun;
+        private KontrolerUCPretragaRacuna kontrolerUCPretragaRacuna;
 
         internal void OtvoriLoginFormu()
         {   
@@ -119,6 +123,16 @@ namespace Klijent
         {
             PrijemnicaStavke prijemnicaStavke = kontrolerPrijemnicaStavke.GenerisiUC(prijemnica);
             prijemnicaStavke.ShowDialog();
+        }
+
+        internal void OtvoriUCKreirajRacun()
+        {
+            KlijentForma.PostaviPanel(kontrolerUCKreirajRacun.GenerisiUC());
+        }
+
+        internal void OtvoriUCPretragaRacuna()
+        {
+            KlijentForma.PostaviPanel(kontrolerUCPretragaRacuna.GenerisiUC());
         }
     }
 }

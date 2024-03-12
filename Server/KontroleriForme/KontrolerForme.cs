@@ -46,6 +46,14 @@ namespace Klijent.KontroleriForme
             {
                 Koordinator.Instance.OtvoriUCPretragaPrijemnica();
             };
+            Forma.kreirajRacunToolStripMenuItem.Click += (s, e) =>
+            {
+                Koordinator.Instance.OtvoriUCKreirajRacun();
+            };
+            Forma.pretragaRacunaToolStripMenuItem.Click += (s, e) =>
+            {
+                Koordinator.Instance.OtvoriUCPretragaRacuna();
+            };
             Forma.FormClosed += OdjaviSe;
             return Forma;
         }

@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="DBConnection\DBConnection.cs" />
     <Compile Include="DBConnection\DBConnectionFactory.cs" />
+    <Compile Include="Domen\Banka.cs" />
     <Compile Include="Domen\Dostavnica.cs" />
     <Compile Include="Domen\Faktura.cs" />
     <Compile Include="Domen\Firma.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Domen\Otpremnica.cs" />
     <Compile Include="Domen\Prijemnica.cs" />
     <Compile Include="Domen\Prozivod.cs" />
+    <Compile Include="Domen\Racun.cs" />
     <Compile Include="Domen\StavkaDostavnice.cs" />
     <Compile Include="Domen\StavkaFakture.cs" />
     <Compile Include="Domen\StavkaOtpremnice.cs" />
@@ -96,9 +98,11 @@
     <Compile Include="KontroleriForme\UCKontroleri\KontrolerUCKreirajFakturu.cs" />
     <Compile Include="KontroleriForme\UCKontroleri\KontrolerUCKreirajOtpremnicu.cs" />
     <Compile Include="KontroleriForme\UCKontroleri\KontrolerUCKreirajPrijemnicu.cs" />
+    <Compile Include="KontroleriForme\UCKontroleri\KontrolerUCKreirajRacun.cs" />
     <Compile Include="KontroleriForme\UCKontroleri\KontrolerUCKreirajZapisnik.cs" />
     <Compile Include="KontroleriForme\UCKontroleri\KontrolerUCPretragaFaktura.cs" />
     <Compile Include="KontroleriForme\UCKontroleri\KontrolerUCPretragaPrijemnica.cs" />
+    <Compile Include="KontroleriForme\UCKontroleri\KontrolerUCPretragaRacuna.cs" />
     <Compile Include="Koordinator.cs" />
     <Compile Include="Forme\Login.cs">
       <SubType>Form</SubType>
@@ -112,6 +116,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Session.cs" />
+    <Compile Include="SistemskeOperacije\BankaSO\IzmeniBankeSO.cs" />
+    <Compile Include="SistemskeOperacije\BankaSO\VratiBankeSO.cs" />
     <Compile Include="SistemskeOperacije\DostavnicaSO\KreirajDostavnicuSO.cs" />
     <Compile Include="SistemskeOperacije\DostavnicaSO\VratiDostavniceSO.cs" />
     <Compile Include="SistemskeOperacije\FakturaSO\KreirajFakturuSO.cs" />
@@ -128,6 +134,9 @@
     <Compile Include="SistemskeOperacije\PrijemnicaSO\VratiPrijemnicePoUslovuSO.cs" />
     <Compile Include="SistemskeOperacije\PrijemnicaSO\VratiPrijemniceSO.cs" />
     <Compile Include="SistemskeOperacije\ProzivodSO\VratiProzvodeSO.cs" />
+    <Compile Include="SistemskeOperacije\RacunSO\IzmeniRacuneSO.cs" />
+    <Compile Include="SistemskeOperacije\RacunSO\KreirajRacunSO.cs" />
+    <Compile Include="SistemskeOperacije\RacunSO\VratiRacuneSO.cs" />
     <Compile Include="SistemskeOperacije\SistemskaOperacijaBaza.cs" />
     <Compile Include="SistemskeOperacije\StavkaFaktureSO\VratiStavkeFaktureSO.cs" />
     <Compile Include="SistemskeOperacije\StavkaPrijemniceSO\IzmeniStavkeSO.cs" />
@@ -159,6 +168,12 @@
     <Compile Include="UserControls\UCKreirajPrijemnicu.Designer.cs">
       <DependentUpon>UCKreirajPrijemnicu.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCKreirajRacun.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCKreirajRacun.Designer.cs">
+      <DependentUpon>UCKreirajRacun.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCKreirajZapisnik.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -176,6 +191,12 @@
     </Compile>
     <Compile Include="UserControls\UCPretragaPrijemnica.Designer.cs">
       <DependentUpon>UCPretragaPrijemnica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCPretragaRacuna.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCPretragaRacuna.Designer.cs">
+      <DependentUpon>UCPretragaRacuna.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forme\FakturaDetalji.resx">
       <DependentUpon>FakturaDetalji.cs</DependentUpon>
@@ -210,6 +231,9 @@
     <EmbeddedResource Include="UserControls\UCKreirajPrijemnicu.resx">
       <DependentUpon>UCKreirajPrijemnicu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCKreirajRacun.resx">
+      <DependentUpon>UCKreirajRacun.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCKreirajZapisnik.resx">
       <DependentUpon>UCKreirajZapisnik.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCPretragaPrijemnica.resx">
       <DependentUpon>UCPretragaPrijemnica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCPretragaRacuna.resx">
+      <DependentUpon>UCPretragaRacuna.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

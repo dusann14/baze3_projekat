@@ -1,6 +1,7 @@
 ﻿using Common.Domen;
 using Server.Domen;
 using Server.SistemskeOperacije;
+using Server.SistemskeOperacije.BankaSO;
 using Server.SistemskeOperacije.DostavnicaSO;
 using Server.SistemskeOperacije.FakturaSO;
 using Server.SistemskeOperacije.FirmaSO;
@@ -10,6 +11,7 @@ using Server.SistemskeOperacije.OtpremnicaSO;
 using Server.SistemskeOperacije.PrijavaSO;
 using Server.SistemskeOperacije.PrijemnicaSO;
 using Server.SistemskeOperacije.ProzivodSO;
+using Server.SistemskeOperacije.RacunSO;
 using Server.SistemskeOperacije.StavkaFaktureSO;
 using Server.SistemskeOperacije.StavkaPrijemniceSO;
 using Server.SistemskeOperacije.ValutaSO;
@@ -185,6 +187,38 @@ namespace Server
         internal void IzmeniStavke(List<StavkaPrijemnice> promenjeneStavke)
         {
             IzmeniStavkeSO so = new IzmeniStavkeSO(promenjeneStavke);
+            so.Template();
+        }
+
+        internal List<Banka> VratiBanke()
+        {
+            VratiBankeSO so = new VratiBankeSO();
+            so.Template();
+            return so.Rezultat;
+        }
+
+        internal void KreirajRacun(Racun racun)
+        {
+            KreirajRacunSO so = new KreirajRacunSO(racun);
+            so.Template();
+        }
+
+        internal List<Racun> VratiRacune()
+        {
+            VratiRacuneSO so = new VratiRacuneSO();
+            so.Template();
+            return so.Rezultat;
+        }
+
+        internal void IzmeniRacune(List<Racun> izmenjeniRacuni)
+        {
+            IzmeniRacuneSO so = new IzmeniRacuneSO(izmenjeniRacuni);
+            so.Template();
+        }
+
+        internal void IzmeniBanke(List<Banka> izmenjeneBanke)
+        {
+            IzmeniBankeSO so = new IzmeniBankeSO(izmenjeneBanke);
             so.Template();
         }
     }
